@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 with open("ekg_daten.csv", "r") as file:
     times = []
     signals = []
@@ -8,3 +10,6 @@ with open("ekg_daten.csv", "r") as file:
         signalContent = int(lineContent[1])
         times.append(timeContent)
         signals.append(signalContent)
+
+plt.plot(times,signals)
+plt.show()
