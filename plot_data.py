@@ -12,6 +12,16 @@ with open("ekg_daten.csv", "r") as file:
         signals.append(signalContent)
 
 
+    summe = sum(signals)
+    maximum= max(signals)
+    minimum = min(signals)
+    anzahl = len(signals)
+    durchschnitt = (summe / anzahl)
+    durchschnitt = round(durchschnitt, 2)
+
+print(f"Maximaler Wert: {maximum} (bpm)\n")
+print(f"Minimaler Wert: {minimum} (bpm)\n")
+print(f"Durchschnittlicher Wert: {durchschnitt} (bpm)")
 
 plt.plot(times,signals,color="red")
 plt.title("EKG Signalverlauf")
