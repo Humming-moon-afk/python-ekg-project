@@ -11,5 +11,11 @@ with open("ekg_daten.csv", "r") as file:
         times.append(timeContent)
         signals.append(signalContent)
 
-plt.plot(times,signals)
+
+
+plt.plot(times,signals,color="red")
+plt.title("EKG Signalverlauf")
+plt.xlabel("Zeit in (s)")
+plt.ylabel("Herzfrequenz (bpm)")
+plt.grid(True)
 plt.show()
